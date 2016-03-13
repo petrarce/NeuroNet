@@ -28,10 +28,12 @@ double Neuron::ActivFunc(double Value)
 {
 	return 1/(1+exp(-Value));
 }
+
 Neuron::Neuron()
 {
 	SetW_0_5();
 }
+
 Neuron::Neuron(QList<unsigned short> Data)
 {
 	this->Inp=Data;

@@ -8,6 +8,7 @@ class Neuron
 	public:
 		QList<double> W;		//wiets of neuron
 		QList<unsigned short> Inp;
+		QList<double> dW;
 		double St;				//state of neuron after calculating the weights
 
 
