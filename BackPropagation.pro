@@ -14,9 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    src/neuron.cpp
+    src/neuron.cpp \
+    src/layer.cpp\
+    
 
 HEADERS  += mainwindow.h \
-    lib/neuron.h
+    lib/neuron.h \
+    lib/layer.h\
+    
 
 FORMS    += mainwindow.ui

@@ -19,7 +19,7 @@ double Neuron::GetSum()
 	double _sum=0;
 	for(int i=0;i<(this->W.size());i++)
 	{
-		_sum+=this->W[i]*this->Inp[i];
+		_sum+=this->W[i]*(*this->Inp)[i];
 	}
 	return _sum;
 }
@@ -31,11 +31,16 @@ double Neuron::ActivFunc(double Value)
 
 Neuron::Neuron()
 {
+	this->Inp=new QList<unsigned short>;
 	SetW_0_5();
 }
 
-Neuron::Neuron(QList<unsigned short> Data)
+Neuron::Neuron(QList<unsigned short> *Data)
 {
 	this->Inp=Data;
 	SetW_0_5();
+}
+Neuron::~Neuron()
+{
+	delete this->Inp;
 }

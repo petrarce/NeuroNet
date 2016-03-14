@@ -7,7 +7,7 @@ class Neuron
 		//------------ATRIBUTES----------
 	public:
 		QList<double> W;		//wiets of neuron
-		QList<unsigned short> Inp;
+		QList<unsigned short> *Inp;
 		QList<double> dW;
 		double St;				//state of neuron after calculating the weights
 
@@ -16,7 +16,8 @@ class Neuron
 	public:
 		void Activate();
 		Neuron();
-		Neuron(QList<unsigned short> Data);
+		Neuron(QList<unsigned short> *Data);
+		~Neuron();
 
 	private:
 		double GetSum();
